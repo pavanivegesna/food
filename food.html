@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foodie's Delight</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #ffa07a;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background-color: #ff6347;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    .food-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff6f61;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Foodie's Delight</h1>
+    <p>Your favorite place for delicious recipes!</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('menu')">Menu</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="home" class="section active">
+    <h2>Welcome to Foodie's Delight!</h2>
+    <p>Discover tasty recipes, quick bites, and culinary tips to spice up your kitchen!</p>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <div class="food-card">
+      <h3>Margherita Pizza</h3>
+      <p>Classic pizza with tomatoes, mozzarella, and fresh basil.</p>
+    </div>
+    <div class="food-card">
+      <h3>Spaghetti Carbonara</h3>
+      <p>Rich and creamy pasta with pancetta, eggs, and parmesan.</p>
+    </div>
+    <div class="food-card">
+      <h3>Caesar Salad</h3>
+      <p>Crisp romaine, parmesan, croutons, and Caesar dressing.</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We're passionate about food and love sharing recipes with the world. Whether you're a beginner or a seasoned chef, we've got something for you!</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: hello@foodiesdelight.com</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Foodie's Delight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
